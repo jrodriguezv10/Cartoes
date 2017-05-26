@@ -109,6 +109,8 @@ function getShapesFromAPI(possibleShapes, possibleSentidos) {
     $.each(possibleShape, function(j, shape) {
       if(shape!=30){
         requestShape(shape, i, j, possibleSentidos[i][j]);
+      }else{
+        requestShape("030", i, j, possibleSentidos[i][j]);
       }
       totalRequests++;
     });
